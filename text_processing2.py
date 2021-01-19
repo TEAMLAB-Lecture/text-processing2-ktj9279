@@ -42,7 +42,7 @@ def digits_to_words(input_string):
         '9': 'nine',
     }
 
-    digit_string = ' '.join([num2str_dict[c] for c in input_string if c in num2str_dict)
+    digit_string = ' '.join([num2str_dict[c] for c in input_string if c in num2str_dict])
 
     return digit_string
 
@@ -85,7 +85,7 @@ def to_camel_case(underscore_str):
     if '_' not in underscore_str:
         return underscore_str
 
-    camelcase_str = [for c.capitalize() in underscore_str.split('_') if c]
+    camelcase_str = [c.capitalize() for c in underscore_str.split('_') if c]
     camelcase_str[0] = camelcase_str[0].lower()
     camelcase_str = ''.join(camelcase_str)
 
